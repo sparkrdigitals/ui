@@ -1,3 +1,11 @@
+import { Link } from 'react-router-dom';
+
 export function Header() {
-  return <div>Header</div>;
+  return (
+    <header>
+      <Link to='/'>
+        <img src='/icons/brand-logo.svg' alt='logo' />
+      </Link>
+    </header>
+  );
 }

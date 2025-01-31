@@ -35,6 +35,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'import/no-extraneous-dependencies': 'off',
+    'import/no-cycle': 'off',
     'import/prefer-default-export': 'off',
     'func-style': [
       'error',
