@@ -1,3 +1,3 @@
 export function GlobalSearch() {
-  return <div>themeSwitcher</div>;
+  return <div>GlobalSwitch</div>;
 }

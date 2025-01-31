@@ -5,7 +5,7 @@ import { ThemeSwitcher } from '../ui/theme-switcher';
 
 export function Header() {
   return (
-    <header>
+    <header className='bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100'>
       <div className='flex justify-between items-center container'>
         <div className='flex items-center gap-20'>
           <Link to='/'>
@@ -24,9 +24,9 @@ export function Header() {
         </div>
 
         <div className='flex gap-10'>
-          <ThemeSwitcher />
-
           <GlobalSearch />
+
+          <ThemeSwitcher />
 
           <div>socials</div>
         </div>

@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import { Layout } from './components/layouts';
+import { ThemeProvider } from './contexts/theme-contexts';
 import './index.css';
 import { Components, Home, PageNotFound } from './pages';
 
@@ -32,6 +33,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );
