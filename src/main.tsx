@@ -7,7 +7,7 @@ import {
 
 import { Layout } from './components/layouts';
 import './index.css';
-import { Components, Home } from './pages';
+import { Components, Home, PageNotFound } from './pages';
 
 const router = createBrowserRouter([
   {
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/components',
-    element: <Components />,
+    path: '*',
+    element: <PageNotFound />,
   },
 ]);
 
