@@ -9,6 +9,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'airbnb/hooks',
     'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -19,6 +20,12 @@ module.exports = {
   },
   settings: {
     react: { version: '18.2' },
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   plugins: ['react-refresh', 'import'],
   rules: {
@@ -27,6 +34,8 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
     'func-style': [
       'error',
       'declaration',
@@ -43,6 +52,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': [2, { skipUndeclared: true }],
     'react/state-in-constructor': [2, 'never'],
+    'react/require-default-props': 'off',
     'react/jsx-wrap-multilines': [
       'error',
       {
