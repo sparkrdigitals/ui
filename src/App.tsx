@@ -1,11 +1,9 @@
-import { Button } from '@/components/button';
-
-import './App.css';
+import { Header } from './components/layouts';
 
 function App() {
   return (
     <div>
-      <Button />
+      <Header />
     </div>
   );
 }
