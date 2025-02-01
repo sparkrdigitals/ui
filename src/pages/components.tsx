@@ -1,3 +1,3 @@
-export function Components() {
+export const Components = () => {
   return <div>Components</div>;
-}
+};

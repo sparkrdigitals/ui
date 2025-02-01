@@ -7,7 +7,7 @@ type User = {
   name: string;
 };
 
-export function Page() {
+export const Page = () => {
   const [user, setUser] = React.useState<User>();
 
   return (
@@ -91,4 +91,4 @@ export function Page() {
       </section>
     </article>
   );
-}
+};

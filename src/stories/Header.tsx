@@ -12,12 +12,12 @@ export interface HeaderProps {
   onCreateAccount?: () => void;
 }
 
-export function Header({
+export const Header = ({
   user,
   onLogin,
   onLogout,
   onCreateAccount,
-}: HeaderProps) {
+}: HeaderProps) => {
   return (
     <header>
       <div className='storybook-header'>
@@ -72,4 +72,4 @@ export function Header({
       </div>
     </header>
   );
-}
+};
