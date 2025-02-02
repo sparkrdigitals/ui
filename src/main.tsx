@@ -9,6 +9,7 @@ import { Layout } from './components/layouts';
 import { ThemeProvider } from './contexts/theme-contexts';
 import './index.css';
 import { Components, Home, PageNotFound } from './pages';
+import ComponentRoute from './routes/component-route';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       {
         element: <Components />,
         path: 'components',
+        children: ComponentRoute,
       },
     ],
   },
