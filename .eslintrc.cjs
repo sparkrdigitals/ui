@@ -91,16 +91,6 @@ module.exports = {
       },
     ],
     'import/order': 'off',
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: [
-          'vite.config.js',
-          '**/*.test.tsx',
-          '**/*.spec.tsx',
-        ],
-      },
-    ],
     'prettier/prettier': ['error'],
   },
 };

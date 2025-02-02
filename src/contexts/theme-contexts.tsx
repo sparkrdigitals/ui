@@ -6,7 +6,6 @@ import {
   useState,
 } from 'react';
 
-// Define the shape of the context
 interface ThemeContextType {
   theme: 'light' | 'dark';
   toggleTheme: () => void;

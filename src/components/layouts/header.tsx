@@ -1,8 +1,8 @@
 import useTheme from '@/hooks/use-theme';
 import { Link } from 'react-router-dom';
 
-import { GlobalSearch } from '../ui/global-search';
-import { ThemeSwitcher } from '../ui/theme-switcher';
+import { GlobalSearch } from '../internal/global-search';
+import { ThemeSwitcher } from '../internal/theme-switcher';
 
 export const Header = () => {
   const { theme } = useTheme();
