@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     container: {
       center: true,
@@ -27,21 +27,35 @@ module.exports = {
       },
       colors: {
         border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
+        brand: '#105e3a',
         ring: 'hsl(var(--ring))',
+        active: 'hsl(var(--active))',
+        text: 'hsl(var(--text))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          hover: 'hsl(var(--destructive-hover))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          hover: 'hsl(var(--secondary-hover))',
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          hover: 'hsl(var(--primary-hover))',
+        },
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          hover: 'hsl(var(--success-hover))',
+        },
+        warn: {
+          DEFAULT: 'hsl(var(--warn))',
+          hover: 'hsl(var(--warn-hover))',
+        },
+        gray: {
+          DEFAULT: 'hsl(var(--gray))',
+          hover: 'hsl(var(--gray-hover))',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',

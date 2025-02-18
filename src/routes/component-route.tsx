@@ -1,6 +1,6 @@
-import { Button } from '@/components/library/button';
+import { LandingPage } from '@/components/layouts';
+import { ButtonShowcase } from '@/components/library/button';
 import { Drawer } from '@/components/library/drawer';
-import { LandingPage } from '@/pages';
 import { RouteObject } from 'react-router-dom';
 
 const ComponentRoute: RouteObject[] = [
@@ -10,7 +10,7 @@ const ComponentRoute: RouteObject[] = [
   },
   {
     path: 'button',
-    element: <Button />,
+    element: <ButtonShowcase />,
   },
   {
     path: 'drawer',

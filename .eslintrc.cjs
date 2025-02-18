@@ -91,6 +91,6 @@ module.exports = {
       },
     ],
     'import/order': 'off',
-    'prettier/prettier': ['error'],
+    'prettier/prettier': 'off',
   },
 };

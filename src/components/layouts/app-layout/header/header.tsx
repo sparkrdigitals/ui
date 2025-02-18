@@ -1,14 +1,16 @@
 import useTheme from '@/hooks/use-theme';
-import { Link } from 'react-router-dom';
+import { cn } from '@/lib/utils';
+import { Link, useLocation } from 'react-router-dom';
 
-import { GlobalSearch } from '../internal/global-search';
-import { ThemeSwitcher } from '../internal/theme-switcher';
+import { GlobalSearch } from '../../../internal/global-search';
+import { ThemeSwitcher } from '../../../internal/theme-switcher';
 
 export const Header = () => {
   const { theme } = useTheme();
+  const location = useLocation();
 
   return (
-    <header className='py-4'>
+    <header className='py-4 header fixed left-0 right-0 top-0 z-50 border-b dark:border-white/15 border-black/15 bg-background'>
       <div className='flex justify-between items-center container'>
         <div className='flex items-center gap-20'>
           <Link to='/'>
@@ -19,7 +21,7 @@ export const Header = () => {
                   : '/icons/brand-logo.svg'
               }
               alt='logo'
-              width={110}
+              width={80}
             />
           </Link>
 
@@ -28,7 +30,11 @@ export const Header = () => {
               {navlinks.map(({ label, to }) => (
                 <Link
                   to={to}
-                  className='capitalize hover:text-white duration-300'
+                  className={cn(
+                    'hover:text-foreground text-text capitalize duration-300',
+                    location.pathname.includes(to) &&
+                      'text-foreground font-semibold',
+                  )}
                 >
                   <li>{label}</li>
                 </Link>
@@ -47,14 +53,14 @@ export const Header = () => {
           <div className='flex items-center gap-4'>
             <Link
               to='/'
-              className='font-medium hover:text-white duration-300 text-sm'
+              className='font-medium hover:text-foreground text-text duration-300 text-sm'
             >
               Twitter
             </Link>
 
             <Link
               to='/'
-              className='font-medium hover:text-white duration-300 text-sm'
+              className='font-medium hover:text-foreground text-text duration-300 text-sm'
             >
               Discord
             </Link>

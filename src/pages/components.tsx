@@ -1,21 +1,5 @@
-import { Outlet } from 'react-router-dom';
+import { Layout } from '@/components/layouts/component-page-layout/layout';
 
-export const Components = () => {
-  return (
-    <div>
-      <Sidebar />
-
-      <main>
-        <Outlet />
-      </main>
-    </div>
-  );
-};
-
-const Sidebar = () => {
-  return <div>sidebar</div>;
-};
-
-export const LandingPage = () => {
-  return <div>sidebar</div>;
+export const Component = () => {
+  return <Layout />;
 };
